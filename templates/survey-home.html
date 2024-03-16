@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block title%}Servey{% endblock %}
+{% block h1 %} {{s.title}} {% endblock %}
+{% block main %}
+<form action="/start_survey" method="POST">
+<p>{{s.instructions}}</p>
+<button>Add Responses</button>
+</form>
+ {% endblock %}
