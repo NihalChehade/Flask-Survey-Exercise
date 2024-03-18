@@ -3,3 +3,13 @@
 {% block title %}Completed{% endblock %}
 
 {% block h1 %}Thank you for completing  the survey! {% endblock %}
+{% block main %}
+<ul>
+    {% for question in questions %}
+    
+    
+    <li><b>{{question.question}} </b> {{session['responses'][questions.index(question)]['choice']}} <i>{{session['responses'][questions.index(question)]['comment']}} </i></li>
+
+    {% endfor %}
+</ul>
+{% endblock %}

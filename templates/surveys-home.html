@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block title%}Serveys{% endblock %}
+{% block h1 %} Here are the list of surveys you can choose to fill {% endblock %}
+{% block main %}
+<form action="/picked_survey">
+
+{% for key in surveys.keys() %}
+
+<input type="radio" name="survey_key" value="{{key}}">{{key}}
+
+{% endfor %}
+
+<button>choose your survey!</button>
+</form>
+ {% endblock %}
